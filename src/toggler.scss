@@ -1,0 +1,43 @@
+div.cl-toggle {
+
+  >:first-child {
+    background-image: url('img/plus.png');
+    background-repeat: no-repeat;
+    padding-left: 1.4em;
+    background-position: left 0;
+    background-size: 1.2em;
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    a:link {
+
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  > .visible {
+    background-image: url('img/minus.png');
+  }
+
+  >div {
+    transform-origin: top left;
+    display: none;
+    overflow-y: hidden;
+  }
+}
+
+div.cl-toggleblock {
+  position: relative;
+  overflow:auto;
+  padding: 5px;
+  border: 1pt gray solid;
+}
