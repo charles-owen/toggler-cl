@@ -2,7 +2,7 @@
   "name": "toggler-cl",
   "version": "4.0.0",
   "description": "Block toggler with simple animation",
-  "main": "dist/icons.js",
+  "main": "dist/toggler-cl.js",
   "private": false,
   "scripts": {
     "build:dev": "npx webpack --config webpack.dev.js",
