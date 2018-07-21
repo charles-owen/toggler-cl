@@ -74,7 +74,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "cbfc23a8c7995b142a2e";
+/******/ 	var hotCurrentHash = "f9816b9c3476b65162ff";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -3384,7 +3384,9 @@ var _Tools = __webpack_require__(/*! ./DOM/Tools.js */ "./src/DOM/Tools.js");
 var Toggler = function Toggler() {};
 
 exports.Toggler = Toggler;
-Toggler.VELOCITY = 1000; // Animation speed in pixels per second
+Toggler.VELOCITY = 2000; // Animation speed in pixels per second
+
+Toggler.MAXDURATION = 300; // Maximum allowed duration
 
 Toggler.install = function () {
   document.body.addEventListener('click', function (event) {
@@ -3442,6 +3444,11 @@ Toggler.install = function () {
   function slideOn(block, clickedOn) {
     var maxHeight = getHeight(block);
     var duration = maxHeight / Toggler.VELOCITY * 1000;
+
+    if (duration > Toggler.MAXDURATION) {
+      duration = Toggler.MAXDURATION;
+    }
+
     block.style.transform = 'scaleY(0.01)';
     block.style.marginBottom = '-100%';
     block.style.display = 'block';

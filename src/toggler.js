@@ -8,8 +8,8 @@ import {Tools} from './DOM/Tools.js';
 export let Toggler = function() {
 }
 
-Toggler.VELOCITY = 1000;     // Animation speed in pixels per second
-
+Toggler.VELOCITY = 2000;    // Animation speed in pixels per second
+Toggler.MAXDURATION = 300;  // Maximum allowed duration
 
 Toggler.install = function () {
     document.body.addEventListener('click', (event) => {
@@ -51,6 +51,9 @@ Toggler.install = function () {
     function slideOn(block, clickedOn) {
         let maxHeight = getHeight(block);
         let duration = maxHeight / Toggler.VELOCITY * 1000;
+        if(duration > Toggler.MAXDURATION) {
+            duration = Toggler.MAXDURATION;
+        }
 
         block.style.transform = 'scaleY(0.01)';
         block.style.marginBottom = '-100%';
