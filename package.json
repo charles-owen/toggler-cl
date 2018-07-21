@@ -13,6 +13,10 @@
     "User interface",
     "Toggle"
   ],
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/charles-owen/toggler-cl.git"
+  },
   "author": "Charles B. Owen",
   "license": "MIT",
   "devDependencies": {

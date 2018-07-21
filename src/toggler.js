@@ -12,7 +12,7 @@ Toggler.VELOCITY = 1000;     // Animation speed in pixels per second
 
 
 Toggler.install = function () {
-    document.body.onclick = (event) => {
+    document.body.addEventListener('click', (event) => {
 
         let clickedOn = event.target;
         let parent = clickedOn.parentNode;
@@ -31,7 +31,7 @@ Toggler.install = function () {
             event.preventDefault();
             toggle(clickedOn);
         }
-    }
+    });
 
     function toggle(clickedOn) {
         let parent = clickedOn.parentNode;

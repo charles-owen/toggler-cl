@@ -74,7 +74,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "d2291a5439b4e22ad008";
+/******/ 	var hotCurrentHash = "cbfc23a8c7995b142a2e";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -3387,7 +3387,7 @@ exports.Toggler = Toggler;
 Toggler.VELOCITY = 1000; // Animation speed in pixels per second
 
 Toggler.install = function () {
-  document.body.onclick = function (event) {
+  document.body.addEventListener('click', function (event) {
     var clickedOn = event.target;
     var parent = clickedOn.parentNode;
 
@@ -3401,7 +3401,7 @@ Toggler.install = function () {
       event.preventDefault();
       toggle(clickedOn);
     }
-  };
+  });
 
   function toggle(clickedOn) {
     var parent = clickedOn.parentNode;
