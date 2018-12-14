@@ -1,23 +1,25 @@
-div.cl-toggle > :first-child {
-  background-image: url("img/plus.png");
-  background-repeat: no-repeat;
-  padding-left: 1.4em;
-  background-position: left 0;
-  background-size: 1.2em;
-  cursor: pointer; }
-  div.cl-toggle > :first-child a {
-    text-decoration: none;
-    color: inherit;
+div.cl-toggle {
+  margin-bottom: 1em; }
+  div.cl-toggle > :first-child {
+    background-image: url("img/plus.png");
+    background-repeat: no-repeat;
+    padding-left: 1.4em;
+    background-position: left 0;
+    background-size: 1.2em;
     cursor: pointer; }
-  div.cl-toggle > :first-child a:hover {
-    text-decoration: none;
-    color: inherit; }
-div.cl-toggle > .visible {
-  background-image: url("img/minus.png"); }
-div.cl-toggle > div {
-  transform-origin: top left;
-  display: none;
-  overflow-y: hidden; }
+    div.cl-toggle > :first-child a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer; }
+    div.cl-toggle > :first-child a:hover {
+      text-decoration: none;
+      color: inherit; }
+  div.cl-toggle > .visible {
+    background-image: url("img/minus.png"); }
+  div.cl-toggle > div {
+    transform-origin: top left;
+    display: none;
+    overflow-y: hidden; }
 
 div.cl-toggleblock {
   position: relative;
