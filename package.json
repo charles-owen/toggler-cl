@@ -30,11 +30,11 @@
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
-    "hoek": "^5.0.4",
+    "hoek": "^6.1.2",
     "html-webpack-include-assets-plugin": "^1.0.6",
     "html-webpack-plugin": "^3.2.0",
     "jasmine-core": "^3.3.0",
-    "karma": "^2.0.5",
+    "karma": "^3.1.4",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^1.1.2",
     "karma-jasmine-html-reporter": "^1.4.0",
@@ -50,7 +50,6 @@
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14",
-    "webpack-jquery-ui": "^1.0.0",
     "webpack-merge": "^4.1.5"
   }
 }
