@@ -1,6 +1,6 @@
 {
   "name": "toggler-cl",
-  "version": "4.1.3",
+  "version": "4.1.4",
   "description": "Block toggler with simple animation",
   "main": "dist/toggler-cl.js",
   "module": "src/toggler.js",
