@@ -16,21 +16,23 @@ Toggler.install = function () {
 
         let clickedOn = event.target;
         let parent = clickedOn.parentNode;
+        if(parent !== null && parent.parentNode !== null) {
+            if (clickedOn.tagName === 'A' &&
+                parent.parentNode.tagName === 'DIV' &&
+                parent.parentNode.classList.contains('cl-toggle')) {
+                // We clicked on the link inside of the toggle block
+                event.preventDefault();
+                toggle(parent);
+            }
 
-        if (clickedOn.tagName === 'A' &&
-            parent.parentNode.tagName === 'DIV' &&
-            parent.parentNode.classList.contains('cl-toggle')) {
-            // We clicked on the link inside of the toggle block
-            event.preventDefault();
-            toggle(parent);
+            if (parent.tagName === 'DIV' &&
+                parent.children[0] === clickedOn &&
+                parent.classList.contains('cl-toggle')) {
+                event.preventDefault();
+                toggle(clickedOn);
+            }
         }
 
-        if (parent.tagName === 'DIV' &&
-            parent.children[0] === clickedOn &&
-            parent.classList.contains('cl-toggle')) {
-            event.preventDefault();
-            toggle(clickedOn);
-        }
     });
 
     function toggle(clickedOn) {
