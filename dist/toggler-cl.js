@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "a937fe832670b5c5b344";
+/******/ 	var hotCurrentHash = "4fa8ba607ebcdd02c827";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -357,7 +357,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 			var outdatedModules = [updateModuleId];
 /******/ 			var outdatedDependencies = {};
 /******/
-/******/ 			var queue = outdatedModules.slice().map(function(id) {
+/******/ 			var queue = outdatedModules.map(function(id) {
 /******/ 				return {
 /******/ 					chain: [id],
 /******/ 					id: id
@@ -534,12 +534,15 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 			moduleId = outdatedModules[i];
 /******/ 			if (
 /******/ 				installedModules[moduleId] &&
-/******/ 				installedModules[moduleId].hot._selfAccepted
-/******/ 			)
+/******/ 				installedModules[moduleId].hot._selfAccepted &&
+/******/ 				// removed self-accepted modules should not be required
+/******/ 				appliedUpdate[moduleId] !== warnUnexpectedRequire
+/******/ 			) {
 /******/ 				outdatedSelfAcceptedModules.push({
 /******/ 					module: moduleId,
 /******/ 					errorHandler: installedModules[moduleId].hot._selfAccepted
 /******/ 				});
+/******/ 			}
 /******/ 		}
 /******/
 /******/ 		// Now in "dispose" phase
@@ -606,7 +609,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 			}
 /******/ 		}
 /******/
-/******/ 		// Not in "apply" phase
+/******/ 		// Now in "apply" phase
 /******/ 		hotSetStatus("apply");
 /******/
 /******/ 		hotCurrentHash = hotUpdateNewHash;
@@ -830,10 +833,10 @@ module.exports = _typeof;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js?sourceMap!./src/toggler.scss":
-/*!*****************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/lib/loader.js?sourceMap!./src/toggler.scss ***!
-  \*****************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js?sourceMap!./src/toggler.scss":
+/*!***************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader!./node_modules/sass-loader/dist/cjs.js?sourceMap!./src/toggler.scss ***!
+  \***************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1581,7 +1584,7 @@ ready(Toggler.install);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!../node_modules/resolve-url-loader!../node_modules/sass-loader/lib/loader.js?sourceMap!./toggler.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js?sourceMap!./src/toggler.scss");
+var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!../node_modules/resolve-url-loader!../node_modules/sass-loader/dist/cjs.js?sourceMap!./toggler.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js?sourceMap!./src/toggler.scss");
 
 if (typeof content === 'string') {
   content = [[module.i, content, '']];
@@ -1601,9 +1604,9 @@ if (content.locals) {
 if (true) {
   if (!content.locals) {
     module.hot.accept(
-      /*! !../node_modules/css-loader/dist/cjs.js!../node_modules/resolve-url-loader!../node_modules/sass-loader/lib/loader.js?sourceMap!./toggler.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js?sourceMap!./src/toggler.scss",
+      /*! !../node_modules/css-loader/dist/cjs.js!../node_modules/resolve-url-loader!../node_modules/sass-loader/dist/cjs.js?sourceMap!./toggler.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js?sourceMap!./src/toggler.scss",
       function () {
-        var newContent = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!../node_modules/resolve-url-loader!../node_modules/sass-loader/lib/loader.js?sourceMap!./toggler.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/lib/loader.js?sourceMap!./src/toggler.scss");
+        var newContent = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!../node_modules/resolve-url-loader!../node_modules/sass-loader/dist/cjs.js?sourceMap!./toggler.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/resolve-url-loader/index.js!./node_modules/sass-loader/dist/cjs.js?sourceMap!./src/toggler.scss");
 
         if (typeof newContent === 'string') {
           newContent = [[module.i, newContent, '']];
