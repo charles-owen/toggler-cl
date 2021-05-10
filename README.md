@@ -26,9 +26,9 @@ more like expanding and shrinking, which is the behavior this example provides.
 ### CDN
 
 ``` html
-<script src="https://unpkg.com/icons-cl/dist/toggler-cl.js"></script>
+<script src="https://unpkg.com/toggler-cl/dist/toggler-cl.js"></script>
 <!-- or -->
-<script src="https://unpkg.com/icons-cl/dist/toggler-cl.min.js"></script>
+<script src="https://unpkg.com/toggler-cl/dist/toggler-cl.min.js"></script>
 ```
 
 ### Package managers
